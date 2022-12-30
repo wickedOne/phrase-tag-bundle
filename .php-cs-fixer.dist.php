@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<'EOF'
-This file is part of the Phrase Translation Helper.
+This file is part of the Phrase Translation Bundle.
 (c) wicliff <wicliff.wolda@gmail.com>
 
 For the full copyright and license information, please view the LICENSE
