@@ -22,6 +22,9 @@ use Symfony\Component\Translation\Exception\ProviderException;
 use WickedOne\PhraseTranslationBundle\Command\PhraseKeyUntagCommand;
 use WickedOne\PhraseTranslationBundle\Service\PhraseTagService;
 
+/**
+ * @author wicliff <wicliff.wolda@gmail.com>
+ */
 class PhraseKeyUntagCommandTest extends TestCase
 {
     private MockObject&PhraseTagService $tagService;
