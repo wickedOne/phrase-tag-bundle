@@ -38,5 +38,11 @@
         "symfony/http-client": "^5.4.17|^6.0",
         "symfony/translation": "^5.4.17|^6.0",
         "symfony/monolog-bundle": "^3.8"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
     }
 }
