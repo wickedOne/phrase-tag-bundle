@@ -43,7 +43,9 @@ abstract class AbstractPhraseKeyCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        /** @var ?string $key */
         $key = $input->getOption('query-key');
+        /** @var string[] $tags */
         $tags = $input->getOption('query-tag');
 
         if (null === $key && [] === $tags) {

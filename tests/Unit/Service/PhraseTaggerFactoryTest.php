@@ -59,7 +59,19 @@ class PhraseTaggerFactoryTest extends TestCase
             ->create('https://PROJECT_ID:API_TOKEN@default:8080?userAgent=myProject');
     }
 
-    public function testMissingReuiredOptionException(): void
+    /**
+     * @dataProvider invalidDsnProvider
+     */
+    public function testMissingUsernameOrPassword(string $dsn): void
+    {
+        $this->expectException(\LogicException::class);
+        $this->expectExceptionMessage('please provide project id and api key');
+
+        $this->createFactory()
+            ->create($dsn);
+    }
+
+    public function testMissingRequiredOptionException(): void
     {
         $this->expectException(MissingRequiredOptionException::class);
         $this->expectExceptionCode(0);
@@ -67,6 +79,17 @@ class PhraseTaggerFactoryTest extends TestCase
 
         $this->createFactory()
             ->create('phrase://PROJECT_ID:API_TOKEN@default');
+    }
+
+    public function invalidDsnProvider(): \Generator
+    {
+        yield 'no project id' => [
+            'dsn' => 'phrase://:API_TOKEN@default',
+        ];
+
+        yield 'no api key' => [
+            'dsn' => 'phrase://PROJECT_ID:@default:8080?userAgent=myProject',
+        ];
     }
 
     private function createFactory(): PhraseTaggerFactory

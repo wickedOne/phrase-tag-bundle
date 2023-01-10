@@ -107,7 +107,7 @@ class PhraseTagServiceTest extends TestCase
                 $this->assertSame('https://api.phrase.com/api/v2/projects/1/keys/tag?page=1&per_page=100', $url);
                 $this->assertSame(http_build_query($body), $options['body']);
 
-                return new MockResponse(json_encode(['records_affected' => 10], \JSON_THROW_ON_ERROR));
+                return new MockResponse(json_encode(['records_affected' => '10'], \JSON_THROW_ON_ERROR));
             },
         ];
 

@@ -36,15 +36,22 @@ class PhraseKeyUntagCommand extends AbstractPhraseKeyCommand
 
     protected function executeCommand(InputInterface $input, OutputInterface $output): int
     {
+        /** @var string $queryKey */
+        $queryKey = $input->getOption('query-key');
+        /** @var string[] $queryTag */
+        $queryTag = $input->getOption('query-tag');
+        /** @var string[] $tag */
+        $tag = $input->getOption('tag');
+
         try {
-            $keys = $this->tagService->untag($input->getOption('query-key'), $input->getOption('query-tag'), $input->getOption('tag'));
+            $keys = $this->tagService->untag($queryKey, $queryTag, $tag);
         } catch (ProviderException $e) {
             $output->writeln(sprintf('<error>%s</error>', $e->getMessage()));
 
             return Command::FAILURE;
         }
 
-        $output->writeln(sprintf('<info>successfully untagged %d keys with "%s"</info>', $keys, implode(', ', $input->getOption('tag'))));
+        $output->writeln(sprintf('<info>successfully untagged %d keys with "%s"</info>', $keys, implode(', ', $tag)));
 
         return Command::SUCCESS;
     }

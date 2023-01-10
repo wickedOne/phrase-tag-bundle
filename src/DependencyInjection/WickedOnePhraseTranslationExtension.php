@@ -25,12 +25,14 @@ use WickedOne\PhraseTranslationBundle\Service\PhraseTaggerFactory;
 use WickedOne\PhraseTranslationBundle\Service\PhraseTagService;
 
 /**
+ * @phpstan-type PhraseConfig array{dsn: string}
+ *
  * @author wicliff <wicliff.wolda@gmail.com>
  */
 class WickedOnePhraseTranslationExtension extends Extension
 {
     /**
-     * @param array<string, string[]> $config
+     * @param array<array-key, mixed> $config
      */
     public function getConfiguration(array $config, ContainerBuilder $container): ConfigurationInterface
     {
@@ -40,23 +42,24 @@ class WickedOnePhraseTranslationExtension extends Extension
     /**
      * {@inheritdoc}
      *
-     * @param array<string, string[]> $configs
+     * @param array<array-key, mixed> $configs
      */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = $this->getConfiguration($configs, $container);
+        /** @var PhraseConfig $config */
         $config = $this->processConfiguration($configuration, $configs);
 
         $xmlLoader = new XmlFileLoader($container, new FileLocator(\dirname(__DIR__).'/../config'));
         $xmlLoader->load('services.xml');
 
         $this->loadTagService($container, $config);
-        $this->loadTagCommand($container, $config);
-        $this->loadUntagCommand($container, $config);
+        $this->loadTagCommand($container);
+        $this->loadUntagCommand($container);
     }
 
     /**
-     * @param array<string, string[]> $config
+     * @param PhraseConfig $config
      */
     private function loadTagService(ContainerBuilder $container, array $config): void
     {
@@ -67,10 +70,7 @@ class WickedOnePhraseTranslationExtension extends Extension
         $container->setDefinition(PhraseTagService::class, $definition);
     }
 
-    /**
-     * @param array<string, string[]> $config
-     */
-    private function loadTagCommand(ContainerBuilder $container, array $config): void
+    private function loadTagCommand(ContainerBuilder $container): void
     {
         $definition = (new Definition(PhraseKeyTagCommand::class))
             ->setArguments([$container->getDefinition(PhraseTagService::class)])
@@ -79,10 +79,7 @@ class WickedOnePhraseTranslationExtension extends Extension
         $container->setDefinition(PhraseKeyTagCommand::class, $definition);
     }
 
-    /**
-     * @param array<string, string[]> $config
-     */
-    private function loadUntagCommand(ContainerBuilder $container, array $config): void
+    private function loadUntagCommand(ContainerBuilder $container): void
     {
         $definition = (new Definition(PhraseKeyUntagCommand::class))
             ->setArguments([$container->getDefinition(PhraseTagService::class)])

@@ -36,8 +36,9 @@
         "symfony/console": "^5.4.17|^6.0",
         "symfony/framework-bundle": "^5.4.17|^6.0",
         "symfony/http-client": "^5.4.17|^6.0",
+        "symfony/monolog-bundle": "^3.8",
         "symfony/translation": "^5.4.17|^6.0",
-        "symfony/monolog-bundle": "^3.8"
+        "vimeo/psalm": "^5.4"
     },
     "config": {
         "sort-packages": true,

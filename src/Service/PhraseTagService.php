@@ -46,7 +46,10 @@ class PhraseTagService
             throw new ProviderException(sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
         }
 
-        return array_column($response->toArray(), 'name');
+        /** @var array{name: string} $arr */
+        $arr = $response->toArray();
+
+        return array_column($arr, 'name');
     }
 
     /**
@@ -71,11 +74,13 @@ class PhraseTagService
             throw new ProviderException(sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
         }
 
-        $records = $response->toArray()['records_affected'];
+        /** @var array{records_affected: string} $arr */
+        $arr = $response->toArray();
+        $records = $arr['records_affected'];
 
         $this->logger->info(sprintf('tagged %d keys matching "%s" with tag(s) "%s"', $records, $query, implode(', ', $addTags)));
 
-        return $records;
+        return (int) $records;
     }
 
     /**
@@ -100,11 +105,13 @@ class PhraseTagService
             throw new ProviderException(sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
         }
 
-        $records = (int) $response->toArray()['records_affected'];
+        /** @var array{records_affected: string} $arr */
+        $arr = $response->toArray();
+        $records = $arr['records_affected'];
 
         $this->logger->info(sprintf('untagged %d keys matching "%s" with tag(s) "%s"', $records, $query, implode(', ', $removeTags)));
 
-        return $records;
+        return (int) $records;
     }
 
     /**
