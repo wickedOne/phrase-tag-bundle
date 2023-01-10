@@ -39,12 +39,19 @@ class PhraseTaggerFactory
         }
 
         $endpoint = 'default' === $dsn->getHost() ? self::HOST : $dsn->getHost();
-        $endpoint .= $dsn->getPort() ? ':'.$dsn->getPort() : '';
+
+        if (null !== $port = $dsn->getPort()) {
+            $endpoint .= ':'.$port;
+        }
+
+        if (null === ($user = $dsn->getUser()) || null === ($password = $dsn->getPassword())) {
+            throw new \LogicException('please provide project id and api key');
+        }
 
         $client = $this->httpClient->withOptions([
-            'base_uri' => 'https://'.$endpoint.'/v2/projects/'.$dsn->getUser().'/',
+            'base_uri' => 'https://'.$endpoint.'/v2/projects/'.$user.'/',
             'headers' => [
-                'Authorization' => 'token '.$dsn->getPassword(),
+                'Authorization' => 'token '.$password,
                 'User-Agent' => $dsn->getRequiredOption('userAgent'),
             ],
         ]);

@@ -4,6 +4,7 @@ this might be especially usefull when you switched to using the [phrase translat
 
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FwickedOne%2Fphrase-translation-bundle%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/wickedOne/phrase-translation-bundle/master)
 [![codecov](https://codecov.io/gh/wickedOne/phrase-translation-bundle/branch/master/graph/badge.svg?token=UHKAVGURP7)](https://codecov.io/gh/wickedOne/phrase-translation-bundle)
+[![psalm](https://shepherd.dev/github/wickedOne/phrase-translation-bundle/coverage.svg)](https://shepherd.dev/github/wickedOne/phrase-translation-bundle)
 [![Latest Stable Version](http://poser.pugx.org/wickedone/phrase-translation-bundle/v)](https://packagist.org/packages/wickedone/phrase-translation-bundle)
 [![Total Downloads](http://poser.pugx.org/wickedone/phrase-translation-bundle/downloads)](https://packagist.org/packages/wickedone/phrase-translation-bundle)
 [![License](http://poser.pugx.org/wickedone/phrase-translation-bundle/license)](https://packagist.org/packages/wickedone/phrase-translation-bundle)
