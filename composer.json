@@ -1,22 +1,22 @@
 {
-    "name": "wickedone/phrase-translation-bundle",
+    "name": "wickedone/phrase-tag-bundle",
     "description": "helpers to deal with your phrase translations",
     "type": "symfony-bundle",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "WickedOne\\PhraseTranslationBundle\\": "src/"
+            "WickedOne\\PhraseTagBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WickedOne\\PhraseTranslationBundle\\Tests\\": "tests/"
+            "WickedOne\\PhraseTagBundle\\Tests\\": "tests/"
         }
     },
     "authors": [
         {
             "name": "wickedOne",
-            "email": "wicliff.wolda@gmail.com"
+            "homepage": "https://github.com/wickedOne"
         }
     ],
     "minimum-stability": "stable",

@@ -3,20 +3,20 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Phrase Translation Bundle.
+ * This file is part of the Phrase Tag Bundle.
  * (c) wicliff <wicliff.wolda@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WickedOne\PhraseTranslationBundle\Tests\Unit\DependencyInjection;
+namespace WickedOne\PhraseTagBundle\Tests\Unit\DependencyInjection;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionConfigurationTestCase;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use WickedOne\PhraseTranslationBundle\DependencyInjection\Configuration;
-use WickedOne\PhraseTranslationBundle\DependencyInjection\WickedOnePhraseTranslationExtension;
+use WickedOne\PhraseTagBundle\DependencyInjection\Configuration;
+use WickedOne\PhraseTagBundle\DependencyInjection\WickedOnePhraseTagExtension;
 
 /**
  * @author wicliff <wicliff.wolda@gmail.com>
@@ -47,7 +47,7 @@ class ConfigurationTest extends AbstractExtensionConfigurationTestCase
 
     protected function getContainerExtension(): ExtensionInterface
     {
-        return new WickedOnePhraseTranslationExtension();
+        return new WickedOnePhraseTagExtension();
     }
 
     protected function getConfiguration(): ConfigurationInterface
