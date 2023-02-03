@@ -3,14 +3,14 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Phrase Translation Bundle.
+ * This file is part of the Phrase Tag Bundle.
  * (c) wicliff <wicliff.wolda@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WickedOne\PhraseTranslationBundle\DependencyInjection;
+namespace WickedOne\PhraseTagBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -26,7 +26,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('wicked_one_phrase_translation_bundle');
+        $treeBuilder = new TreeBuilder('wicked_one_phrase_tag_bundle');
         /** @var ArrayNodeDefinition $rootNode */
         $rootNode = $treeBuilder->getRootNode();
 

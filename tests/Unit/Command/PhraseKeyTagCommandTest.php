@@ -3,14 +3,14 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Phrase Translation Bundle.
+ * This file is part of the Phrase Tag Bundle.
  * (c) wicliff <wicliff.wolda@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WickedOne\PhraseTranslationBundle\Tests\Unit\Command;
+namespace WickedOne\PhraseTagBundle\Tests\Unit\Command;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
@@ -19,8 +19,8 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use Symfony\Component\Translation\Exception\ProviderException;
-use WickedOne\PhraseTranslationBundle\Command\PhraseKeyTagCommand;
-use WickedOne\PhraseTranslationBundle\Service\PhraseTagService;
+use WickedOne\PhraseTagBundle\Command\PhraseKeyTagCommand;
+use WickedOne\PhraseTagBundle\Service\PhraseTagService;
 
 /**
  * @author wicliff <wicliff.wolda@gmail.com>

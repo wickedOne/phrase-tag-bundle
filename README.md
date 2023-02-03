@@ -1,4 +1,4 @@
-# phrase-translation-bundle
+# phrase-tag-bundle
 providing some commands & services to help you manage your translation keys at phrase.
 this might be especially usefull when you switched to using the [phrase translation provider](https://github.com/wickedOne/phrase-translation-provider).
 
@@ -21,7 +21,7 @@ of the Composer documentation.
 Open a command console, enter your project directory and execute:
 
 ```console
-$ composer require wickedone/phrase-translation-bundle
+$ composer require wickedone/phrase-tag-bundle
 ```
 
 ### Applications that don't use Symfony Flex
@@ -32,7 +32,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require wickedone/phrase-translation-bundle
+$ composer require wickedone/phrase-tag-bundle
 ```
 
 #### Step 2: Enable the Bundle
@@ -45,14 +45,14 @@ in the `config/bundles.php` file of your project:
 
 return [
     // ...
-    WickedOne\PhraseTranslationBundle\WickedOnePhraseTranslationBundle::class => ['all' => true],
+    WickedOne\PhraseTagBundle\WickedOnePhraseTagBundle::class => ['all' => true],
 ];
 ```
 
 #### step 3: configuration
 in your `config/packages` directory create a `wickedone.yaml` file with the following content:
 ```yaml
-wicked_one_phrase_translation:
+wicked_one_phrase_tag:
   dsn: '%env(PHRASE_DSN)%'
 ```
 and in your `.env` file define the phrase dsn like so
