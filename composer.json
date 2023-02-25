@@ -23,10 +23,10 @@
     "require-dev": {
         "phpunit/phpunit": "^10.0.12",
         "infection/infection": "^0.26.19",
-        "phpstan/phpstan": "^1.10.2",
+        "phpstan/phpstan": "^1.10.3",
         "phpstan/phpstan-deprecation-rules": "^1.1.2",
         "phpstan/phpstan-php-parser": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3.7",
+        "phpstan/phpstan-phpunit": "^1.3.8",
         "roave/security-advisories": "dev-latest",
         "matthiasnoback/symfony-dependency-injection-test": "^4.3"
     },
