@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace WickedOne\PhraseTagBundle\Command;
 
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -21,10 +22,9 @@ use Symfony\Component\Translation\Exception\ProviderException;
 /**
  * @author wicliff <wicliff.wolda@gmail.com>
  */
+#[AsCommand(name: 'phrase:keys:tag')]
 class PhraseKeyTagCommand extends AbstractPhraseKeyCommand
 {
-    protected static $defaultName = 'phrase:keys:tag';
-
     protected function configure(): void
     {
         parent::configure();

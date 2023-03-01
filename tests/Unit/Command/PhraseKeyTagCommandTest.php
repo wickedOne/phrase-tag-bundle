@@ -75,7 +75,7 @@ class PhraseKeyTagCommandTest extends TestCase
         $this->assertSame('something went wrong', trim($commandTester->getDisplay()));
     }
 
-    public function tagProvider(): \Generator
+    public static function tagProvider(): \Generator
     {
         yield 'tag no key single new tag' => [
             'key' => null,
