@@ -15,6 +15,7 @@ namespace WickedOne\PhraseTagBundle\Tests\Unit\Service;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\HttpClient\HttpClientTrait;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use Symfony\Component\Translation\Exception\ProviderException;
@@ -27,6 +28,10 @@ use WickedOne\PhraseTagBundle\Service\PhraseTagService;
  */
 class PhraseTagServiceTest extends TestCase
 {
+    use HttpClientTrait {
+        mergeQueryString as public;
+    }
+
     private MockObject&HttpClientInterface $httpClient;
     private MockObject&LoggerInterface $logger;
 
@@ -45,8 +50,9 @@ class PhraseTagServiceTest extends TestCase
                     'q' => $this->query($key, $tags),
                 ];
 
+                $queryString = $this->mergeQueryString(null, $parts, true);
                 $this->assertSame('GET', $method);
-                $this->assertSame('https://api.phrase.com/api/v2/projects/1/keys?'.http_build_query($parts, encoding_type: \PHP_QUERY_RFC3986), $url);
+                $this->assertSame('https://api.phrase.com/api/v2/projects/1/keys?'.$queryString, $url);
 
                 return new MockResponse($responseContent);
             },
@@ -199,7 +205,7 @@ class PhraseTagServiceTest extends TestCase
         $provider->untag('foo', ['bar'], ['baz']);
     }
 
-    public function tagProvider(): \Generator
+    public static function tagProvider(): \Generator
     {
         yield 'one tag' => [
             'key' => 'myKey.*',
@@ -214,7 +220,7 @@ class PhraseTagServiceTest extends TestCase
         ];
     }
 
-    public function listProvider(): \Generator
+    public static function listProvider(): \Generator
     {
         $content = <<<'JSON'
 [

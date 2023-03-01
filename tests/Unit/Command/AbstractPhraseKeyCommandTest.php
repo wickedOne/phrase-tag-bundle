@@ -100,7 +100,7 @@ class AbstractPhraseKeyCommandTest extends TestCase
         $this->assertSame('no tag provided', trim($commandTester->getDisplay()));
     }
 
-    public function listProvider(): \Generator
+    public static function listProvider(): \Generator
     {
         yield 'key no tag one hit' => [
             'key' => 'error.*',

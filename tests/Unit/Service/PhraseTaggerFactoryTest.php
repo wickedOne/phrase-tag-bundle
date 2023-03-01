@@ -81,7 +81,7 @@ class PhraseTaggerFactoryTest extends TestCase
             ->create('phrase://PROJECT_ID:API_TOKEN@default');
     }
 
-    public function invalidDsnProvider(): \Generator
+    public static function invalidDsnProvider(): \Generator
     {
         yield 'no project id' => [
             'dsn' => 'phrase://:API_TOKEN@default',
