@@ -38,7 +38,7 @@
         "symfony/http-client": "6.2.7",
         "symfony/monolog-bundle": "^3.8",
         "symfony/translation": "6.2.7",
-        "vimeo/psalm": "^5.8.0"
+        "vimeo/psalm": "^5.9.0"
     },
     "config": {
         "sort-packages": true,
