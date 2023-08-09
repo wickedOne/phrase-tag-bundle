@@ -40,8 +40,6 @@ class WickedOnePhraseTagExtension extends Extension
     }
 
     /**
-     * {@inheritdoc}
-     *
      * @param array<array-key, mixed> $configs
      */
     public function load(array $configs, ContainerBuilder $container): void
