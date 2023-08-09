@@ -272,7 +272,7 @@ JSON;
         ];
     }
 
-    private function createTagService(?MockHttpClient $httpClient = null): PhraseTagService
+    private function createTagService(MockHttpClient $httpClient = null): PhraseTagService
     {
         return new PhraseTagService(
             $httpClient ?? $this->getHttpClient(),
