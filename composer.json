@@ -38,7 +38,7 @@
         "symfony/framework-bundle": "6.3.8",
         "symfony/http-client": "6.3.8",
         "symfony/monolog-bundle": "^3.10.0",
-        "symfony/translation": "6.3.7"
+        "symfony/translation": "7.0.0"
     },
     "config": {
         "sort-packages": true,
