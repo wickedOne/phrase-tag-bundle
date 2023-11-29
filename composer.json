@@ -36,7 +36,7 @@
         "symfony/config": "6.3.8",
         "symfony/console": "6.3.8",
         "symfony/framework-bundle": "6.3.8",
-        "symfony/http-client": "6.3.8",
+        "symfony/http-client": "7.0.0",
         "symfony/monolog-bundle": "^3.10.0",
         "symfony/translation": "6.3.7"
     },
