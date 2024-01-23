@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36ad03c3081a47992e4020d8ddfb289a",
+    "content-hash": "00a9ebc37b007cdf82e8b05313b6f2af",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -4055,16 +4055,16 @@
         },
         {
             "name": "matthiasnoback/symfony-dependency-injection-test",
-            "version": "5.0.0",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest.git",
-                "reference": "c2c0c142938977ec57c1165404ac53ea7466a3f4"
+                "reference": "2bd8962a26c05bdaeae2a29c981de57d1f150140"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SymfonyTest/SymfonyDependencyInjectionTest/zipball/c2c0c142938977ec57c1165404ac53ea7466a3f4",
-                "reference": "c2c0c142938977ec57c1165404ac53ea7466a3f4",
+                "url": "https://api.github.com/repos/SymfonyTest/SymfonyDependencyInjectionTest/zipball/2bd8962a26c05bdaeae2a29c981de57d1f150140",
+                "reference": "2bd8962a26c05bdaeae2a29c981de57d1f150140",
                 "shasum": ""
             },
             "require": {
@@ -4115,9 +4115,9 @@
             ],
             "support": {
                 "issues": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/issues",
-                "source": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/tree/5.0.0"
+                "source": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/tree/5.1.0"
             },
-            "time": "2023-11-16T09:23:42+00:00"
+            "time": "2023-12-13T19:23:54+00:00"
         },
         {
             "name": "myclabs/deep-copy",
