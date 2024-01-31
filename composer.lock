@@ -5331,12 +5331,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "2c4fb4cc0aa20a60e4e61401da14a1e4e971de82"
+                "reference": "8bec99c4f1fffab6b556ca11c79d6d9de4486227"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/2c4fb4cc0aa20a60e4e61401da14a1e4e971de82",
-                "reference": "2c4fb4cc0aa20a60e4e61401da14a1e4e971de82",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/8bec99c4f1fffab6b556ca11c79d6d9de4486227",
+                "reference": "8bec99c4f1fffab6b556ca11c79d6d9de4486227",
                 "shasum": ""
             },
             "conflict": {
@@ -5428,7 +5428,7 @@
                 "contao/managed-edition": "<=1.5",
                 "corveda/phpsandbox": "<1.3.5",
                 "cosenary/instagram": "<=2.3",
-                "craftcms/cms": "<=4.5.10",
+                "craftcms/cms": "<4.6.2",
                 "croogo/croogo": "<4",
                 "cuyz/valinor": "<0.12",
                 "czproject/git-php": "<4.0.3",
@@ -5846,6 +5846,7 @@
                 "sukohi/surpass": "<1",
                 "sulu/sulu": "<1.6.44|>=2,<2.2.18|>=2.3,<2.3.8|==2.4.0.0-RC1|>=2.5,<2.5.10",
                 "sumocoders/framework-user-bundle": "<1.4",
+                "superbig/craft-audit": "<3.0.2",
                 "swag/paypal": "<5.4.4",
                 "swiftmailer/swiftmailer": ">=4,<5.4.5",
                 "swiftyedit/swiftyedit": "<1.2",
@@ -6054,7 +6055,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-30T00:13:39+00:00"
+            "time": "2024-01-31T04:04:28+00:00"
         },
         {
             "name": "sanmai/later",
