@@ -21,7 +21,7 @@
     ],
     "minimum-stability": "stable",
     "require-dev": {
-        "infection/infection": "^0.27.11",
+        "infection/infection": "^0.28.1",
         "matthiasnoback/symfony-dependency-injection-test": "^5.1.0",
         "phpstan/phpstan": "^1.10.65",
         "phpstan/phpstan-deprecation-rules": "^1.1.4",
