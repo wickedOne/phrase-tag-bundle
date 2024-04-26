@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace WickedOne\PhraseTagBundle\Tests\Unit\Service;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
@@ -36,10 +37,9 @@ class PhraseTagServiceTest extends TestCase
     private MockObject&LoggerInterface $logger;
 
     /**
-     * @dataProvider listProvider
-     *
      * @param string[] $tags
      */
+    #[DataProvider('listProvider')]
     public function testList(?string $key, array $tags, string $responseContent): void
     {
         $responses = [
@@ -94,11 +94,10 @@ class PhraseTagServiceTest extends TestCase
     }
 
     /**
-     * @dataProvider tagProvider
-     *
      * @param string[] $tags
      * @param string[] $newTags
      */
+    #[DataProvider('tagProvider')]
     public function testTag(?string $key, array $tags, array $newTags): void
     {
         $this->getLogger()
@@ -150,11 +149,10 @@ class PhraseTagServiceTest extends TestCase
     }
 
     /**
-     * @dataProvider tagProvider
-     *
      * @param string[] $tags
      * @param string[] $newTags
      */
+    #[DataProvider('tagProvider')]
     public function testUnTag(?string $key, array $tags, array $newTags): void
     {
         $this->getLogger()
@@ -256,19 +254,19 @@ JSON;
         yield 'key no tags' => [
             'key' => 'translation.*',
             'tags' => [],
-            'content' => $content,
+            'responseContent' => $content,
         ];
 
         yield 'no key but tags' => [
             'key' => null,
             'tags' => ['tag-one', 'tag-two'],
-            'content' => $content,
+            'responseContent' => $content,
         ];
 
         yield 'key and tags' => [
             'key' => 'translation.*',
             'tags' => ['tag-one', 'tag-two'],
-            'content' => $content,
+            'responseContent' => $content,
         ];
     }
 
