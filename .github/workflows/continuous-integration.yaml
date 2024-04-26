@@ -10,6 +10,7 @@ on:
 env:
   MIN_MSI: 95.00
   MIN_COVERED_MSI: 98.00
+  COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.GITHUB_TOKEN }}"}}'
 
 jobs:
   phpunit-tests:

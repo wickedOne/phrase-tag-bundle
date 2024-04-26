@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace WickedOne\PhraseTagBundle\Tests\Unit\Service;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
@@ -59,9 +60,7 @@ class PhraseTaggerFactoryTest extends TestCase
             ->create('https://PROJECT_ID:API_TOKEN@default:8080?userAgent=myProject');
     }
 
-    /**
-     * @dataProvider invalidDsnProvider
-     */
+    #[DataProvider('invalidDsnProvider')]
     public function testMissingUsernameOrPassword(string $dsn): void
     {
         $this->expectException(\LogicException::class);
