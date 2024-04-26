@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace WickedOne\PhraseTagBundle\Tests\Unit\Command;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Application;
@@ -30,11 +31,10 @@ class PhraseKeyUntagCommandTest extends TestCase
     private MockObject&PhraseTagService $tagService;
 
     /**
-     * @dataProvider tagProvider
-     *
      * @param string[] $tag
      * @param string[] $newTags
      */
+    #[DataProvider('tagProvider')]
     public function testUntag(?string $key, array $tag, array $newTags, int $return, string $message): void
     {
         $this->getTagService()
@@ -80,7 +80,7 @@ class PhraseKeyUntagCommandTest extends TestCase
         yield 'tag no key single new tag' => [
             'key' => null,
             'tag' => ['messages'],
-            'newTag' => ['new-tag'],
+            'newTags' => ['new-tag'],
             'return' => 1,
             'message' => 'successfully untagged 1 keys with "new-tag"',
         ];
@@ -88,7 +88,7 @@ class PhraseKeyUntagCommandTest extends TestCase
         yield 'key no tag single new tag' => [
             'key' => 'error.*',
             'tag' => [],
-            'newTag' => ['new-tag'],
+            'newTags' => ['new-tag'],
             'return' => 6,
             'message' => 'successfully untagged 6 keys with "new-tag"',
         ];
@@ -96,7 +96,7 @@ class PhraseKeyUntagCommandTest extends TestCase
         yield 'key & tag & multiple new tag' => [
             'key' => 'error.*',
             'tag' => ['messages'],
-            'newTag' => ['new-tag', 'another-new-tag'],
+            'newTags' => ['new-tag', 'another-new-tag'],
             'return' => 6,
             'message' => 'successfully untagged 6 keys with "new-tag, another-new-tag"',
         ];
