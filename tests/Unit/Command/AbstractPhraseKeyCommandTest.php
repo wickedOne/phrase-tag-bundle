@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace WickedOne\PhraseTagBundle\Tests\Unit\Command;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Application;
@@ -31,12 +32,11 @@ class AbstractPhraseKeyCommandTest extends TestCase
     private MockObject&PhraseTagService $tagService;
 
     /**
-     * @dataProvider listProvider
-     *
      * @param string[] $tag
      * @param string[] $return
      */
-    public function testList(?string $key, array $tag, string $command, array $return, string $message): void
+    #[DataProvider('listProvider')]
+    public function testList(?string $key, array $tag, string $command, array $return, string $output): void
     {
         $this->getTagService()
             ->expects(self::once())
@@ -54,7 +54,7 @@ class AbstractPhraseKeyCommandTest extends TestCase
         ]);
 
         $this->assertSame(Command::SUCCESS, $commandTester->getStatusCode());
-        $this->assertSame($message, trim($commandTester->getDisplay()));
+        $this->assertSame($output, trim($commandTester->getDisplay()));
     }
 
     public function testListProviderException(): void
