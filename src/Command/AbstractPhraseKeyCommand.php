@@ -25,7 +25,7 @@ use WickedOne\PhraseTagBundle\Service\PhraseTagService;
 abstract class AbstractPhraseKeyCommand extends Command
 {
     public function __construct(
-        protected readonly PhraseTagService $tagService
+        protected readonly PhraseTagService $tagService,
     ) {
         parent::__construct();
     }
