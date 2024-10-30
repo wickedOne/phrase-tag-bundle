@@ -3963,16 +3963,16 @@
         },
         {
             "name": "infection/infection",
-            "version": "0.29.7",
+            "version": "0.29.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "243d501ab48a028f714993bc0c217f023af7cdbc"
+                "reference": "e30db7dda2e9308f1435097b56d20e959b06db17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/243d501ab48a028f714993bc0c217f023af7cdbc",
-                "reference": "243d501ab48a028f714993bc0c217f023af7cdbc",
+                "url": "https://api.github.com/repos/infection/infection/zipball/e30db7dda2e9308f1435097b56d20e959b06db17",
+                "reference": "e30db7dda2e9308f1435097b56d20e959b06db17",
                 "shasum": ""
             },
             "require": {
@@ -4076,7 +4076,7 @@
             ],
             "support": {
                 "issues": "https://github.com/infection/infection/issues",
-                "source": "https://github.com/infection/infection/tree/0.29.7"
+                "source": "https://github.com/infection/infection/tree/0.29.8"
             },
             "funding": [
                 {
@@ -4088,7 +4088,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-10-06T12:20:00+00:00"
+            "time": "2024-10-29T23:29:30+00:00"
         },
         {
             "name": "infection/mutator",
@@ -5625,12 +5625,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "622ede44e079ad5c341a40013ef0e16fab2902ab"
+                "reference": "f7a59dd2b8c3ed9bc58f5679d8eda9ba3ebd86fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/622ede44e079ad5c341a40013ef0e16fab2902ab",
-                "reference": "622ede44e079ad5c341a40013ef0e16fab2902ab",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f7a59dd2b8c3ed9bc58f5679d8eda9ba3ebd86fb",
+                "reference": "f7a59dd2b8c3ed9bc58f5679d8eda9ba3ebd86fb",
                 "shasum": ""
             },
             "conflict": {
@@ -5808,7 +5808,7 @@
                 "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.6,<=2019.03.5.1",
                 "ezsystems/platform-ui-assets-bundle": ">=4.2,<4.2.3",
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1-dev|>=2.5,<2.5.15",
-                "ezyang/htmlpurifier": "<4.1.1",
+                "ezyang/htmlpurifier": "<=4.2",
                 "facade/ignition": "<1.16.15|>=2,<2.4.2|>=2.5,<2.5.2",
                 "facturascripts/facturascripts": "<=2022.08",
                 "fastly/magento2": "<1.2.26",
@@ -6451,7 +6451,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-10-28T19:04:33+00:00"
+            "time": "2024-10-29T22:05:01+00:00"
         },
         {
             "name": "sanmai/later",
