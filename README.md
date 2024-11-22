@@ -1,6 +1,6 @@
 # phrase-tag-bundle
 providing some commands & services to help you manage your translation keys at phrase.
-this might be especially usefull when you switched to using the [phrase translation provider](https://github.com/wickedOne/phrase-translation-provider).
+this might be especially useful when you switched to using the [phrase translation provider](https://github.com/wickedOne/phrase-translation-provider).
 
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FwickedOne%2Fphrase-tag-bundle%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/wickedOne/phrase-tag-bundle/master)
 [![codecov](https://codecov.io/gh/wickedOne/phrase-tag-bundle/branch/master/graph/badge.svg?token=UHKAVGURP7)](https://codecov.io/gh/wickedOne/phrase-tag-bundle)
