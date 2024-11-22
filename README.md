@@ -20,7 +20,7 @@ of the Composer documentation.
 Open a command console, enter your project directory and execute:
 
 ```console
-$ composer require wickedone/phrase-tag-bundle
+composer require wickedone/phrase-tag-bundle
 ```
 
 ### Applications that don't use Symfony Flex
@@ -31,7 +31,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require wickedone/phrase-tag-bundle
+composer require wickedone/phrase-tag-bundle
 ```
 
 #### Step 2: Enable the Bundle
