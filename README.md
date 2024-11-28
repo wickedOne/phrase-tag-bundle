@@ -1,4 +1,5 @@
 # phrase-tag-bundle
+
 providing some commands & services to help you manage your translation keys at phrase.
 this might be especially useful when you switched to using the [phrase translation provider](https://github.com/wickedOne/phrase-translation-provider).
 
@@ -49,22 +50,28 @@ return [
 ```
 
 #### step 3: configuration
+
 in your `config/packages` directory create a `wickedone.yaml` file with the following content:
+
 ```yaml
 wicked_one_phrase_tag:
   dsn: '%env(PHRASE_DSN)%'
 ```
+
 and in your `.env` file define the phrase dsn like so
+
 ```dotenv
 PHRASE_DSN=phrase://PROJECT_ID:API_TOKEN@default?userAgent=myProject
 ```
 
 ##### dsn elements
+
 - `PROJECT_ID`: can be retrieved in phrase from `project settings > API > Project ID`
 - `API_TOKEN`: can be created in your [phrase profile settings](https://app.phrase.com/settings/oauth_access_tokens)
 - `default`: endpoint, defaults to `api.phrase.com`
 
 ##### dsn query parameters
+
 - `userAgent`: please read [this](https://developers.phrase.com/api/#overview--identification-via-user-agent) for some examples.
 
 ## Commands
@@ -78,9 +85,11 @@ you can search for multiple tags at once and a broad search on key name using th
 keep in mind the query is an AND query, meaning the keys have to match all criteria.
 
 **example**:
+
 ```bash
 php bin/console phrase:keys:tag -k error.* -t ticket-15 -t ticket-13 --tag epic-5
 ```
+
 this will search for all keys matching the name `error.*` and with tags `ticket-15` AND `ticket-13` and will add the tag `epic-5` to them.
 
 when you add the `--dry-run` option to the command, it will list the first 100 matches to your query.
@@ -92,9 +101,11 @@ you can search for multiple tags at once and a broad search on key name using th
 keep in mind the query is an AND query, meaning the keys have to match all criteria.
 
 **example**:
+
 ```bash
 php bin/console phrase:keys:untag -k error.* -t ticket-15 -t ticket-13 --tag epic-5
 ```
+
 this will search for all keys matching the name `error.*` and with tags `ticket-15` AND `ticket-13` and will remove the tag `epic-5` from them.
 
 when you add the `--dry-run` option to the command, it will list the first 100 matches to your query.
