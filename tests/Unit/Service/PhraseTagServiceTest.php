@@ -211,10 +211,16 @@ class PhraseTagServiceTest extends TestCase
             'newTags' => ['new-tag'],
         ];
 
-        yield 'multiple tag' => [
+        yield 'multiple tags' => [
             'key' => 'myKey.*',
             'tags' => ['tag-one', 'tag-two'],
             'newTags' => ['new-tag', 'another-new-tag'],
+        ];
+
+        yield 'no tag no query' => [
+            'key' => null,
+            'tags' => [],
+            'newTags' => ['new-tag'],
         ];
     }
 
