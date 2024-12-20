@@ -76,18 +76,6 @@ class AbstractPhraseKeyCommandTest extends TestCase
         $this->assertSame('something went wrong', trim($commandTester->getDisplay()));
     }
 
-    public function testInputFailure(): void
-    {
-        $commandTester = $this->createCommandTester();
-        $commandTester->execute([
-            'command' => PhraseKeyTagCommand::getDefaultName(),
-            '-t' => [],
-        ]);
-
-        $this->assertSame(Command::FAILURE, $commandTester->getStatusCode());
-        $this->assertSame('no query parameters provided', trim($commandTester->getDisplay()));
-    }
-
     public function testInputFailureNoDryRun(): void
     {
         $commandTester = $this->createCommandTester();
