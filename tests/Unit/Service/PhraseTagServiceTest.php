@@ -44,11 +44,11 @@ class PhraseTagServiceTest extends TestCase
     {
         $responses = [
             'list keys' => function (string $method, string $url) use ($key, $tags, $responseContent): ResponseInterface {
-                $parts = [
+                $parts = array_filter([
                     'page' => '1',
                     'per_page' => '100',
                     'q' => $this->query($key, $tags),
-                ];
+                ], static fn (string $value): bool => '' !== $value);
 
                 $queryString = $this->mergeQueryString(null, $parts, true);
                 $this->assertSame('GET', $method);
@@ -107,7 +107,7 @@ class PhraseTagServiceTest extends TestCase
 
         $responses = [
             'tag keys' => function (string $method, string $url, array $options = []) use ($key, $tags, $newTags): ResponseInterface {
-                $body = ['q' => $this->query($key, $tags), 'tags' => implode(',', $newTags)];
+                $body = array_filter(['q' => $this->query($key, $tags), 'tags' => implode(',', $newTags)], static fn (string $value): bool => '' !== $value);
                 $this->assertSame('PATCH', $method);
                 $this->assertSame('https://api.phrase.com/api/v2/projects/1/keys/tag?page=1&per_page=100', $url);
                 $this->assertSame(http_build_query($body), $options['body']);
@@ -162,7 +162,7 @@ class PhraseTagServiceTest extends TestCase
 
         $responses = [
             'untag keys' => function (string $method, string $url, array $options = []) use ($key, $tags, $newTags): ResponseInterface {
-                $body = ['q' => $this->query($key, $tags), 'tags' => implode(',', $newTags)];
+                $body = array_filter(['q' => $this->query($key, $tags), 'tags' => implode(',', $newTags)], static fn (string $value): bool => '' !== $value);
                 $this->assertSame('PATCH', $method);
                 $this->assertSame('https://api.phrase.com/api/v2/projects/1/keys/untag?page=1&per_page=100', $url);
                 $this->assertSame(http_build_query($body), $options['body']);
@@ -266,6 +266,12 @@ JSON;
         yield 'key and tags' => [
             'key' => 'translation.*',
             'tags' => ['tag-one', 'tag-two'],
+            'responseContent' => $content,
+        ];
+
+        yield 'no key no tags' => [
+            'key' => null,
+            'tags' => [],
             'responseContent' => $content,
         ];
     }

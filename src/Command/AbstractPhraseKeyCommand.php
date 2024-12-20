@@ -48,12 +48,6 @@ abstract class AbstractPhraseKeyCommand extends Command
         /** @var string[] $tags */
         $tags = $input->getOption('query-tag');
 
-        if (null === $key && [] === $tags) {
-            $output->writeln('<error>no query parameters provided</error>');
-
-            return Command::FAILURE;
-        }
-
         if (true === $input->getOption('dry-run')) {
             return $this->list($output, $key, $tags);
         }

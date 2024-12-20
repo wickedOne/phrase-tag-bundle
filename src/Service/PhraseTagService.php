@@ -34,12 +34,14 @@ class PhraseTagService
      */
     public function list(?string $key, array $tags): array
     {
+        $query = array_filter([
+            'page' => '1',
+            'per_page' => '100',
+            'q' => $this->createQuery($key, $tags),
+        ], static fn (string $value): bool => '' !== $value);
+
         $response = $this->httpClient->request('GET', 'keys', [
-            'query' => [
-                'page' => '1',
-                'per_page' => '100',
-                'q' => $this->createQuery($key, $tags),
-            ],
+            'query' => $query,
         ]);
 
         if (200 !== $statusCode = $response->getStatusCode()) {
@@ -59,15 +61,18 @@ class PhraseTagService
     public function tag(?string $key, array $tags, array $addTags): int
     {
         $query = $this->createQuery($key, $tags);
+
+        $body = array_filter([
+            'q' => $query,
+            'tags' => implode(',', $addTags),
+        ], static fn (string $value): bool => '' !== $value);
+
         $response = $this->httpClient->request('PATCH', 'keys/tag', [
             'query' => [
                 'page' => '1',
                 'per_page' => '100',
             ],
-            'body' => [
-                'q' => $query,
-                'tags' => implode(',', $addTags),
-            ],
+            'body' => $body,
         ]);
 
         if (200 !== $statusCode = $response->getStatusCode()) {
@@ -90,15 +95,18 @@ class PhraseTagService
     public function untag(?string $key, array $tags, array $removeTags): int
     {
         $query = $this->createQuery($key, $tags);
+
+        $body = array_filter([
+            'q' => $query,
+            'tags' => implode(',', $removeTags),
+        ], static fn (string $value): bool => '' !== $value);
+
         $response = $this->httpClient->request('PATCH', 'keys/untag', [
             'query' => [
                 'page' => '1',
                 'per_page' => '100',
             ],
-            'body' => [
-                'q' => $query,
-                'tags' => implode(',', $removeTags),
-            ],
+            'body' => $body,
         ]);
 
         if (200 !== $statusCode = $response->getStatusCode()) {

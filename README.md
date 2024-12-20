@@ -84,6 +84,9 @@ this command helps you to batch tag keys in phrase by querying for existing tags
 you can search for multiple tags at once and a broad search on key name using the `*` wildcard.
 keep in mind the query is an AND query, meaning the keys have to match all criteria.
 
+> [!TIP]
+> if you want to match **all** keys, simply omit the query-key (`-k`) and query-tag (`-t`) options
+
 **example**:
 
 ```bash
@@ -99,6 +102,9 @@ when you add the `--dry-run` option to the command, it will list the first 100 m
 this command helps you to batch remove tags from keys in phrase by querying for existing tags and / or key name.
 you can search for multiple tags at once and a broad search on key name using the `*` wildcard.
 keep in mind the query is an AND query, meaning the keys have to match all criteria.
+
+> [!TIP]
+> if you want to match **all** keys, simply omit the query-key (`-k`) and query-tag (`-t`) options
 
 **example**:
 
