@@ -45,7 +45,7 @@ class PhraseTagService
         ]);
 
         if (200 !== $statusCode = $response->getStatusCode()) {
-            throw new ProviderException(sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
+            throw new ProviderException(\sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
         }
 
         /** @var array{name: string} $arr */
@@ -76,14 +76,14 @@ class PhraseTagService
         ]);
 
         if (200 !== $statusCode = $response->getStatusCode()) {
-            throw new ProviderException(sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
+            throw new ProviderException(\sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
         }
 
         /** @var array{records_affected: string} $arr */
         $arr = $response->toArray();
         $records = $arr['records_affected'];
 
-        $this->logger->info(sprintf('tagged %d keys matching "%s" with tag(s) "%s"', $records, $query, implode(', ', $addTags)));
+        $this->logger->info(\sprintf('tagged %d keys matching "%s" with tag(s) "%s"', $records, $query, implode(', ', $addTags)));
 
         return (int) $records;
     }
@@ -110,14 +110,14 @@ class PhraseTagService
         ]);
 
         if (200 !== $statusCode = $response->getStatusCode()) {
-            throw new ProviderException(sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
+            throw new ProviderException(\sprintf('phrase replied with an error (%d): "%s"', $statusCode, $response->getContent(false)), $response);
         }
 
         /** @var array{records_affected: string} $arr */
         $arr = $response->toArray();
         $records = $arr['records_affected'];
 
-        $this->logger->info(sprintf('untagged %d keys matching "%s" with tag(s) "%s"', $records, $query, implode(', ', $removeTags)));
+        $this->logger->info(\sprintf('untagged %d keys matching "%s" with tag(s) "%s"', $records, $query, implode(', ', $removeTags)));
 
         return (int) $records;
     }

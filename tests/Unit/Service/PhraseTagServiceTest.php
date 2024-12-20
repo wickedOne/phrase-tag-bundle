@@ -103,7 +103,7 @@ class PhraseTagServiceTest extends TestCase
         $this->getLogger()
             ->expects(self::once())
             ->method('info')
-                ->with(sprintf('tagged 10 keys matching "%s" with tag(s) "%s"', $this->query($key, $tags), implode(', ', $newTags)));
+                ->with(\sprintf('tagged 10 keys matching "%s" with tag(s) "%s"', $this->query($key, $tags), implode(', ', $newTags)));
 
         $responses = [
             'tag keys' => function (string $method, string $url, array $options = []) use ($key, $tags, $newTags): ResponseInterface {
@@ -158,7 +158,7 @@ class PhraseTagServiceTest extends TestCase
         $this->getLogger()
             ->expects(self::once())
             ->method('info')
-            ->with(sprintf('untagged 10 keys matching "%s" with tag(s) "%s"', $this->query($key, $tags), implode(', ', $newTags)));
+            ->with(\sprintf('untagged 10 keys matching "%s" with tag(s) "%s"', $this->query($key, $tags), implode(', ', $newTags)));
 
         $responses = [
             'untag keys' => function (string $method, string $url, array $options = []) use ($key, $tags, $newTags): ResponseInterface {

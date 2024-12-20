@@ -71,7 +71,7 @@ abstract class AbstractPhraseKeyCommand extends Command
         try {
             $result = $this->tagService->list($key, $tags);
         } catch (ProviderException $e) {
-            $output->writeln(sprintf('<error>%s</error>', $e->getMessage()));
+            $output->writeln(\sprintf('<error>%s</error>', $e->getMessage()));
 
             return Command::FAILURE;
         }
@@ -85,7 +85,7 @@ abstract class AbstractPhraseKeyCommand extends Command
         $output->writeln('<info>your query would match the following keys (sample):</info>');
 
         foreach ($result as $item) {
-            $output->writeln(sprintf('<comment>></comment> <info>%s</info>', $item));
+            $output->writeln(\sprintf('<comment>></comment> <info>%s</info>', $item));
         }
 
         return Command::SUCCESS;
