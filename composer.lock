@@ -4446,16 +4446,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.5",
+            "version": "11.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b9a975972f580c0491f834eb0818ad2b32fd8bba"
+                "reference": "3c3ae14c90f244cdda95028c3e469028e8d1c02c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b9a975972f580c0491f834eb0818ad2b32fd8bba",
-                "reference": "b9a975972f580c0491f834eb0818ad2b32fd8bba",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3c3ae14c90f244cdda95028c3e469028e8d1c02c",
+                "reference": "3c3ae14c90f244cdda95028c3e469028e8d1c02c",
                 "shasum": ""
             },
             "require": {
@@ -4527,7 +4527,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.6"
             },
             "funding": [
                 {
@@ -4543,7 +4543,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-29T14:01:11+00:00"
+            "time": "2025-01-31T07:03:30+00:00"
         },
         {
             "name": "roave/security-advisories",
@@ -4551,12 +4551,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "b6841f6613aeea6dbf722ac1663e6409653873d5"
+                "reference": "c10bce58e215dabda33ba5dd3f3a153e85684222"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/b6841f6613aeea6dbf722ac1663e6409653873d5",
-                "reference": "b6841f6613aeea6dbf722ac1663e6409653873d5",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/c10bce58e215dabda33ba5dd3f3a153e85684222",
+                "reference": "c10bce58e215dabda33ba5dd3f3a153e85684222",
                 "shasum": ""
             },
             "conflict": {
@@ -4655,6 +4655,7 @@
                 "codeigniter4/framework": "<4.5.8",
                 "codeigniter4/shield": "<1.0.0.0-beta8",
                 "codiad/codiad": "<=2.8.4",
+                "components/jquery": ">=1.0.3,<3.5",
                 "composer/composer": "<1.10.27|>=2,<2.2.24|>=2.3,<2.7.7",
                 "concrete5/concrete5": "<9.3.4",
                 "concrete5/core": "<8.5.8|>=9,<9.1",
@@ -5414,7 +5415,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-30T23:05:03+00:00"
+            "time": "2025-01-31T21:04:56+00:00"
         },
         {
             "name": "sanmai/later",
