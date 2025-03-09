@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9417f222b51496bc09ef347cfc41e317",
+    "content-hash": "43aea97287058fb0874575c9d605bbb3",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -3731,21 +3731,21 @@
         },
         {
             "name": "matthiasnoback/symfony-config-test",
-            "version": "v5.2.0",
+            "version": "v6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SymfonyTest/SymfonyConfigTest.git",
-                "reference": "40864143f0a223112605040d6cf867ef86fa5651"
+                "reference": "8e8a69086356f695065ed83f8adaf33544d6d055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SymfonyTest/SymfonyConfigTest/zipball/40864143f0a223112605040d6cf867ef86fa5651",
-                "reference": "40864143f0a223112605040d6cf867ef86fa5651",
+                "url": "https://api.github.com/repos/SymfonyTest/SymfonyConfigTest/zipball/8e8a69086356f695065ed83f8adaf33544d6d055",
+                "reference": "8e8a69086356f695065ed83f8adaf33544d6d055",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1",
-                "phpunit/phpunit": "^9.6 || ^10.0 || ^11.0",
+                "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0",
                 "symfony/config": "^5.4 || ^6.2 || ^7.0"
             },
             "type": "library",
@@ -3783,29 +3783,29 @@
             ],
             "support": {
                 "issues": "https://github.com/SymfonyTest/SymfonyConfigTest/issues",
-                "source": "https://github.com/SymfonyTest/SymfonyConfigTest/tree/v5.2.0"
+                "source": "https://github.com/SymfonyTest/SymfonyConfigTest/tree/v6.0.0"
             },
-            "time": "2024-06-23T19:12:42+00:00"
+            "time": "2025-03-08T10:17:30+00:00"
         },
         {
             "name": "matthiasnoback/symfony-dependency-injection-test",
-            "version": "6.0.0",
+            "version": "6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest.git",
-                "reference": "487b7fd71e158de74573f9dd6e51b5e24eb32f1f"
+                "reference": "a8fc681e04fac57e4f71b3fffb0ed5ccbb448d48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SymfonyTest/SymfonyDependencyInjectionTest/zipball/487b7fd71e158de74573f9dd6e51b5e24eb32f1f",
-                "reference": "487b7fd71e158de74573f9dd6e51b5e24eb32f1f",
+                "url": "https://api.github.com/repos/SymfonyTest/SymfonyDependencyInjectionTest/zipball/a8fc681e04fac57e4f71b3fffb0ed5ccbb448d48",
+                "reference": "a8fc681e04fac57e4f71b3fffb0ed5ccbb448d48",
                 "shasum": ""
             },
             "require": {
-                "matthiasnoback/symfony-config-test": "^5.0",
+                "matthiasnoback/symfony-config-test": "^5.0 || ^6.0",
                 "php": "^8.1",
-                "phpunit/phpunit": "^10.5.11 || ^11.0",
-                "sebastian/exporter": " ^5.0 || ^6.0",
+                "phpunit/phpunit": "^10.5.11 || ^11.0 || ^12.0",
+                "sebastian/exporter": " ^5.0 || ^6.0 || ^7.0",
                 "symfony/config": "^5.4 || ^6.2 || ^7.0",
                 "symfony/dependency-injection": "^5.4 || ^6.2 || ^7.0",
                 "symfony/yaml": "^5.4 || ^6.2 || ^7.0"
@@ -3845,9 +3845,9 @@
             ],
             "support": {
                 "issues": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/issues",
-                "source": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/tree/6.0.0"
+                "source": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/tree/6.1.0"
             },
-            "time": "2024-04-26T08:38:14+00:00"
+            "time": "2025-03-08T18:08:49+00:00"
         },
         {
             "name": "myclabs/deep-copy",
