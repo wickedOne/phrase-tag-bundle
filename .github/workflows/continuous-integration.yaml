@@ -154,8 +154,6 @@ jobs:
           dependency-versions: "${{ matrix.dependencies }}"
 
       - name: "php cs fixer dry run"
-        env:
-          PHP_CS_FIXER_IGNORE_ENV: 1
         run: "php-cs-fixer fix --dry-run --format=checkstyle | cs2pr"
 
   markdownlint:
