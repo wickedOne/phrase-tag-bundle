@@ -46,7 +46,7 @@ class PhraseKeyUntagCommandTest extends TestCase
 
         $commandTester = $this->createCommandTester();
         $commandTester->execute([
-            'command' => PhraseKeyUntagCommand::getDefaultName(),
+            'command' => 'phrase:keys:untag',
             '-k' => $key,
             '-t' => $tag,
             '--tag' => $newTags,
@@ -66,7 +66,7 @@ class PhraseKeyUntagCommandTest extends TestCase
 
         $commandTester = $this->createCommandTester();
         $commandTester->execute([
-            'command' => PhraseKeyUntagCommand::getDefaultName(),
+            'command' => 'phrase:keys:untag',
             '-t' => ['tag'],
             '--tag' => ['new-tag'],
         ]);

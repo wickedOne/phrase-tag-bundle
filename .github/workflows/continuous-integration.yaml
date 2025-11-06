@@ -146,7 +146,7 @@ jobs:
           coverage: "none"
           php-version: "${{ matrix.php-version }}"
           ini-values: memory_limit=-1
-          tools: composer:v2, cs2pr, php-cs-fixer
+          tools: composer:v2, cs2pr
 
       - name: "install dependencies"
         uses: "ramsey/composer-install@3.1.1"
@@ -154,7 +154,7 @@ jobs:
           dependency-versions: "${{ matrix.dependencies }}"
 
       - name: "php cs fixer dry run"
-        run: "php-cs-fixer fix --dry-run --format=checkstyle | cs2pr"
+        run: "vendor/bin/php-cs-fixer fix --dry-run --format=checkstyle | cs2pr"
 
   markdownlint:
     runs-on: "ubuntu-latest"

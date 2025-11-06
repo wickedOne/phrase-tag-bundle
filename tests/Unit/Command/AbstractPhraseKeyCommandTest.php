@@ -21,7 +21,6 @@ use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use Symfony\Component\Translation\Exception\ProviderException;
 use WickedOne\PhraseTagBundle\Command\PhraseKeyTagCommand;
-use WickedOne\PhraseTagBundle\Command\PhraseKeyUntagCommand;
 use WickedOne\PhraseTagBundle\Service\PhraseTagService;
 
 /**
@@ -67,7 +66,7 @@ class AbstractPhraseKeyCommandTest extends TestCase
 
         $commandTester = $this->createCommandTester();
         $commandTester->execute([
-            'command' => PhraseKeyTagCommand::getDefaultName(),
+            'command' => 'phrase:keys:tag',
             '-t' => ['tag'],
             '--dry-run' => null,
         ]);
@@ -80,7 +79,7 @@ class AbstractPhraseKeyCommandTest extends TestCase
     {
         $commandTester = $this->createCommandTester();
         $commandTester->execute([
-            'command' => PhraseKeyTagCommand::getDefaultName(),
+            'command' => 'phrase:keys:tag',
             '-t' => ['current-tag'],
         ]);
 
@@ -93,7 +92,7 @@ class AbstractPhraseKeyCommandTest extends TestCase
         yield 'key no tag one hit' => [
             'key' => 'error.*',
             'tag' => [],
-            'command' => PhraseKeyTagCommand::getDefaultName(),
+            'command' => 'phrase:keys:tag',
             'return' => [
                 'error.general.back',
             ],
@@ -104,7 +103,7 @@ class AbstractPhraseKeyCommandTest extends TestCase
         yield 'tag no key no hits' => [
             'key' => null,
             'tag' => ['messages'],
-            'command' => PhraseKeyTagCommand::getDefaultName(),
+            'command' => 'phrase:keys:tag',
             'return' => [],
             'output' => 'your query does not match any keys',
         ];
@@ -112,7 +111,7 @@ class AbstractPhraseKeyCommandTest extends TestCase
         yield 'tag and key multiple hits' => [
             'key' => 'error.*',
             'tag' => ['messages'],
-            'command' => PhraseKeyUntagCommand::getDefaultName(),
+            'command' => 'phrase:keys:tag',
             'return' => [
                 'error.general.back',
                 'error.general.cancel',
