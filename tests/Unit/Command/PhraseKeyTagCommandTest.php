@@ -46,7 +46,7 @@ class PhraseKeyTagCommandTest extends TestCase
 
         $commandTester = $this->createCommandTester();
         $commandTester->execute([
-            'command' => PhraseKeyTagCommand::getDefaultName(),
+            'command' => 'phrase:keys:tag',
             '-k' => $key,
             '-t' => $tag,
             '--tag' => $newTags,
@@ -66,7 +66,7 @@ class PhraseKeyTagCommandTest extends TestCase
 
         $commandTester = $this->createCommandTester();
         $commandTester->execute([
-            'command' => PhraseKeyTagCommand::getDefaultName(),
+            'command' => 'phrase:keys:tag',
             '-t' => ['tag'],
             '--tag' => ['new-tag'],
         ]);
