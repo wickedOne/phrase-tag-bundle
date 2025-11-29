@@ -35,7 +35,6 @@ class ConfigurationTest extends AbstractExtensionConfigurationTestCase
             },
             [
                 'config/full.yaml',
-                'config/full.xml',
                 'config/full.php',
             ]
         );

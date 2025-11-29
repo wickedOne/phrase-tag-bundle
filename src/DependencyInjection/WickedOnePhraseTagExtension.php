@@ -17,7 +17,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 use Symfony\Component\DependencyInjection\Reference;
 use WickedOne\PhraseTagBundle\Command\PhraseKeyTagCommand;
 use WickedOne\PhraseTagBundle\Command\PhraseKeyUntagCommand;
@@ -48,8 +48,8 @@ class WickedOnePhraseTagExtension extends Extension
         /** @var PhraseConfig $config */
         $config = $this->processConfiguration($configuration, $configs);
 
-        $xmlLoader = new XmlFileLoader($container, new FileLocator(\dirname(__DIR__).'/../config'));
-        $xmlLoader->load('services.xml');
+        $xmlLoader = new PhpFileLoader($container, new FileLocator(\dirname(__DIR__).'/../config'));
+        $xmlLoader->load('services.php');
 
         $this->loadTagService($container, $config);
         $this->loadTagCommand($container);

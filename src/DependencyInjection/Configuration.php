@@ -24,8 +24,9 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('wicked_one_phrase_tag_bundle');
-        /** @var ArrayNodeDefinition $rootNode */
         $rootNode = $treeBuilder->getRootNode();
+
+        \assert($rootNode instanceof ArrayNodeDefinition);
 
         $this->addConfigSection($rootNode);
 

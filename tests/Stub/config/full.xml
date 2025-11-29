@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<container xmlns="http://symfony.com/schema/dic/services">
-
-    <config xmlns="http://example.org/schema/dic/wicked_one_phrase_tag">
-        <dsn>phrase://PROJECT_ID:API_TOKEN@default?userAgent=myProject</dsn>
-    </config>
-
-</container>
