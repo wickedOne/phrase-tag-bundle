@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4044dedc2b699305d168af74dabaf60",
+    "content-hash": "d4840fec1b315a5702a728ca946434be",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -3488,16 +3488,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.90.0",
+            "version": "v3.91.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "ad732c2e9299c9743f9c55ae53cc0e7642ab1155"
+                "reference": "c4a25f20390337789c26b693ae46faa125040352"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/ad732c2e9299c9743f9c55ae53cc0e7642ab1155",
-                "reference": "ad732c2e9299c9743f9c55ae53cc0e7642ab1155",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/c4a25f20390337789c26b693ae46faa125040352",
+                "reference": "c4a25f20390337789c26b693ae46faa125040352",
                 "shasum": ""
             },
             "require": {
@@ -3579,7 +3579,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.90.0"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.91.0"
             },
             "funding": [
                 {
@@ -3587,7 +3587,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-20T15:15:16+00:00"
+            "time": "2025-11-28T22:07:42+00:00"
         },
         {
             "name": "infection/abstract-testframework-adapter",
