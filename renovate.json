@@ -3,5 +3,14 @@
   "extends": [
     "local>wickedOne/.github:renovate-config"
   ],
-  "rangeStrategy": "widen"
+  "rangeStrategy": "widen",
+  "packageRules": [
+    {
+      "matchCategories": ["php"],
+      "matchPackageNames": ["symfony/*"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "symfony (major)",
+      "groupSlug": "symfony-major"
+    }
+  ]
 }
