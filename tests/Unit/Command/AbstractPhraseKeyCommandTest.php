@@ -125,7 +125,9 @@ class AbstractPhraseKeyCommandTest extends TestCase
     private function createCommandTester(): CommandTester
     {
         $application = new Application();
-        $application->add($this->createCommand());
+
+        /* @phpstan-ignore function.alreadyNarrowedType */
+        \is_callable([$application, 'addCommand']) ? $application->addCommand($this->createCommand()) : $application->add($this->createCommand());
 
         $command = $application->find('phrase:keys:tag');
 
