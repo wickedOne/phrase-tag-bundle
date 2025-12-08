@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "734a0691ba78d49f703cbc6a6768d8fa",
+    "content-hash": "949691aa602cb23ab8c928ad36b5baeb",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -1817,16 +1817,16 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v4.0.0",
+            "version": "v4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "c842b070c6a45dd3d30a1d8408d21103cdbbf8d0"
+                "reference": "3b4ee2717ee56c5e1edb516140a175eb2a72bc66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/c842b070c6a45dd3d30a1d8408d21103cdbbf8d0",
-                "reference": "c842b070c6a45dd3d30a1d8408d21103cdbbf8d0",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/3b4ee2717ee56c5e1edb516140a175eb2a72bc66",
+                "reference": "3b4ee2717ee56c5e1edb516140a175eb2a72bc66",
                 "shasum": ""
             },
             "require": {
@@ -1872,7 +1872,7 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/monolog-bundle/issues",
-                "source": "https://github.com/symfony/monolog-bundle/tree/v4.0.0"
+                "source": "https://github.com/symfony/monolog-bundle/tree/v4.0.1"
             },
             "funding": [
                 {
@@ -1892,7 +1892,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-27T09:19:58+00:00"
+            "time": "2025-12-08T08:00:13+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
