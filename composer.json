@@ -21,12 +21,12 @@
     ],
     "minimum-stability": "stable",
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.93.1",
+        "friendsofphp/php-cs-fixer": "^3.94.0",
         "infection/infection": "^0.32",
         "matthiasnoback/symfony-dependency-injection-test": "^6.2.0",
-        "phpstan/phpstan": "^2.1.38",
-        "phpstan/phpstan-deprecation-rules": "^2.0.3",
-        "phpstan/phpstan-phpunit": "^2.0.14",
+        "phpstan/phpstan": "^2.1.39",
+        "phpstan/phpstan-deprecation-rules": "^2.0.4",
+        "phpstan/phpstan-phpunit": "^2.0.15",
         "phpunit/phpunit": "^10.5.11 || ^11.0 || ^12.0",
         "roave/security-advisories": "dev-latest"
     },
