@@ -21,23 +21,23 @@
     ],
     "minimum-stability": "stable",
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.94.2",
-        "infection/infection": "^0.32",
+        "friendsofphp/php-cs-fixer": "^3.95.1",
+        "infection/infection": "^0.32.6",
         "matthiasnoback/symfony-dependency-injection-test": "^6.3.0",
-        "phpstan/phpstan": "^2.1.46",
+        "phpstan/phpstan": "^2.1.50",
         "phpstan/phpstan-deprecation-rules": "^2.0.4",
         "phpstan/phpstan-phpunit": "^2.0.16",
-        "phpunit/phpunit": "^10.5.11 || ^11.0 || ^12.0 || ^13.0",
+        "phpunit/phpunit": "^10.5.11 || ^11.0 || ^12.0 || ^13.1.7",
         "roave/security-advisories": "dev-latest"
     },
     "require": {
         "php": "~8.4.0 || ~8.5.0",
-        "symfony/config": "^6.4 || ^7.0 || ^8.0",
-        "symfony/console": "^6.4 || ^7.0 || ^8.0",
-        "symfony/framework-bundle": "^6.4 || ^7.0 || ^8.0",
-        "symfony/http-client": "^6.4 || ^7.0 || ^8.0",
+        "symfony/config": "^6.4 || ^7.0 || ^8.0.8",
+        "symfony/console": "^6.4 || ^7.0 || ^8.0.8",
+        "symfony/framework-bundle": "^6.4 || ^7.0 || ^8.0.8",
+        "symfony/http-client": "^6.4 || ^7.0 || ^8.0.8",
         "symfony/monolog-bundle": "^4.0.2",
-        "symfony/translation": "^6.4 || ^7.0 || ^8.0"
+        "symfony/translation": "^6.4 || ^7.0 || ^8.0.8"
     },
     "config": {
         "sort-packages": true,
