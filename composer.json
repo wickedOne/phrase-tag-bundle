@@ -22,7 +22,7 @@
     "minimum-stability": "stable",
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.95.1",
-        "infection/infection": "^0.32.6",
+        "infection/infection": "^0.32.7",
         "matthiasnoback/symfony-dependency-injection-test": "^6.3.0",
         "phpstan/phpstan": "^2.1.51",
         "phpstan/phpstan-deprecation-rules": "^2.0.4",
