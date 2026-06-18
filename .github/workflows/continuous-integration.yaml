@@ -31,7 +31,7 @@ jobs:
           - "ubuntu-latest"
     steps:
       - name: "checkout"
-        uses: "actions/checkout@v6"
+        uses: "actions/checkout@v7"
 
       - name: "install php"
         uses: "shivammathur/setup-php@2.37.2"
@@ -68,7 +68,7 @@ jobs:
 
     steps:
       - name: "checkout"
-        uses: "actions/checkout@v6"
+        uses: "actions/checkout@v7"
 
       - name: "install php"
         uses: "shivammathur/setup-php@2.37.2"
@@ -104,7 +104,7 @@ jobs:
 
     steps:
       - name: "checkout"
-        uses: "actions/checkout@v6"
+        uses: "actions/checkout@v7"
 
       - name: "install PHP"
         uses: "shivammathur/setup-php@2.37.2"
@@ -138,7 +138,7 @@ jobs:
 
     steps:
       - name: "checkout"
-        uses: "actions/checkout@v6"
+        uses: "actions/checkout@v7"
 
       - name: "install PHP"
         uses: "shivammathur/setup-php@2.37.2"
@@ -162,7 +162,7 @@ jobs:
 
     steps:
       - name: "checkout"
-        uses: "actions/checkout@v6"
+        uses: "actions/checkout@v7"
 
       - name: "markdown lint"
         uses: "bewuethr/mdl-action@v1"
