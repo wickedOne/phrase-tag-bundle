@@ -24,7 +24,7 @@
         "friendsofphp/php-cs-fixer": "^3.95.11",
         "infection/infection": "^0.34.0",
         "matthiasnoback/symfony-dependency-injection-test": "^6.3.0",
-        "phpstan/phpstan": "^2.2.3",
+        "phpstan/phpstan": "^2.2.4",
         "phpstan/phpstan-deprecation-rules": "^2.0.4",
         "phpstan/phpstan-phpunit": "^2.0.17",
         "phpunit/phpunit": "^10.5.11 || ^11.0 || ^12.0 || ^13.1.7",
