@@ -76,7 +76,12 @@ class PhraseTagServiceTest extends TestCase
     {
         $this->expectException(ProviderException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('phrase replied with an error (404): "server error"');
+
+        if (\is_callable([$this, 'expectExceptionMessageIs'])) { /* @phpstan-ignore function.alreadyNarrowedType */
+            $this->expectExceptionMessageIs('phrase replied with an error (404): "server error"');
+        } else {
+            $this->expectExceptionMessage('phrase replied with an error (404): "server error"');
+        }
 
         $responses = [
             'list keys' => new MockResponse('server error', ['http_code' => 404]),
@@ -131,7 +136,12 @@ class PhraseTagServiceTest extends TestCase
     {
         $this->expectException(ProviderException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('phrase replied with an error (500): "server error"');
+
+        if (\is_callable([$this, 'expectExceptionMessageIs'])) { /* @phpstan-ignore function.alreadyNarrowedType */
+            $this->expectExceptionMessageIs('phrase replied with an error (500): "server error"');
+        } else {
+            $this->expectExceptionMessage('phrase replied with an error (500): "server error"');
+        }
 
         $responses = [
             'tag keys' => new MockResponse('server error', ['http_code' => 500]),
@@ -186,7 +196,12 @@ class PhraseTagServiceTest extends TestCase
     {
         $this->expectException(ProviderException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('phrase replied with an error (344): "server error"');
+
+        if (\is_callable([$this, 'expectExceptionMessageIs'])) { /* @phpstan-ignore function.alreadyNarrowedType */
+            $this->expectExceptionMessageIs('phrase replied with an error (344): "server error"');
+        } else {
+            $this->expectExceptionMessage('phrase replied with an error (344): "server error"');
+        }
 
         $responses = [
             'tag keys' => new MockResponse('server error', ['http_code' => 344]),

@@ -54,7 +54,12 @@ class PhraseTaggerFactoryTest extends TestCase
     {
         $this->expectException(UnsupportedSchemeException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('The "https" scheme is not supported; supported schemes for translation provider "phrase" are: "phrase".');
+
+        if (\is_callable([$this, 'expectExceptionMessageIs'])) { /* @phpstan-ignore function.alreadyNarrowedType */
+            $this->expectExceptionMessageIs('The "https" scheme is not supported; supported schemes for translation provider "phrase" are: "phrase".');
+        } else {
+            $this->expectExceptionMessage('The "https" scheme is not supported; supported schemes for translation provider "phrase" are: "phrase".');
+        }
 
         $this->createFactory()
             ->create('https://PROJECT_ID:API_TOKEN@default:8080?userAgent=myProject');
@@ -64,7 +69,12 @@ class PhraseTaggerFactoryTest extends TestCase
     public function testMissingUsernameOrPassword(string $dsn): void
     {
         $this->expectException(\LogicException::class);
-        $this->expectExceptionMessage('please provide project id and api key');
+
+        if (\is_callable([$this, 'expectExceptionMessageIs'])) { /* @phpstan-ignore function.alreadyNarrowedType */
+            $this->expectExceptionMessageIs('please provide project id and api key');
+        } else {
+            $this->expectExceptionMessage('please provide project id and api key');
+        }
 
         $this->createFactory()
             ->create($dsn);
@@ -74,7 +84,12 @@ class PhraseTaggerFactoryTest extends TestCase
     {
         $this->expectException(MissingRequiredOptionException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('The option "userAgent" is required but missing.');
+
+        if (\is_callable([$this, 'expectExceptionMessageIs'])) { /* @phpstan-ignore function.alreadyNarrowedType */
+            $this->expectExceptionMessageIs('The option "userAgent" is required but missing.');
+        } else {
+            $this->expectExceptionMessage('The option "userAgent" is required but missing.');
+        }
 
         $this->createFactory()
             ->create('phrase://PROJECT_ID:API_TOKEN@default');
