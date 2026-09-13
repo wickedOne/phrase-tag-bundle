@@ -24,7 +24,7 @@
         "friendsofphp/php-cs-fixer": "^3.95.25",
         "infection/infection": "^0.35.4",
         "matthiasnoback/symfony-dependency-injection-test": "^6.3.0",
-        "phpstan/phpstan": "^2.2.13",
+        "phpstan/phpstan": "^2.2.14",
         "phpstan/phpstan-deprecation-rules": "^2.0.5",
         "phpstan/phpstan-phpunit": "^2.0.18",
         "phpunit/phpunit": "^10.5.11 || ^11.0 || ^12.0 || ^13.1.7",
@@ -36,7 +36,7 @@
         "symfony/console": "^6.4 || ^7.0 || ^8.0.8",
         "symfony/framework-bundle": "^6.4 || ^7.0 || ^8.0.8",
         "symfony/http-client": "^6.4 || ^7.0 || ^8.0.8",
-        "symfony/monolog-bundle": "^4.0.2",
+        "symfony/monolog-bundle": "^4.1.0",
         "symfony/translation": "^6.4 || ^7.0 || ^8.0.8"
     },
     "config": {
