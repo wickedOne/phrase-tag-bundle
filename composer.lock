@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ba285b728869a0415df0c7909741690",
+    "content-hash": "644287c3f9364f57bb7e8537003e1a94",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -3898,16 +3898,16 @@
         },
         {
             "name": "infection/infection",
-            "version": "0.35.6",
+            "version": "0.35.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "1b89ae38246fcac2774a8591612f0a863b20e181"
+                "reference": "b87f99811268980b31d152a9e8da52d93b27d438"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/1b89ae38246fcac2774a8591612f0a863b20e181",
-                "reference": "1b89ae38246fcac2774a8591612f0a863b20e181",
+                "url": "https://api.github.com/repos/infection/infection/zipball/b87f99811268980b31d152a9e8da52d93b27d438",
+                "reference": "b87f99811268980b31d152a9e8da52d93b27d438",
                 "shasum": ""
             },
             "require": {
@@ -3918,7 +3918,7 @@
                 "ext-json": "*",
                 "ext-libxml": "*",
                 "ext-mbstring": "*",
-                "fidry/cpu-core-counter": "^1.0",
+                "fidry/cpu-core-counter": "^1.4",
                 "infection/abstract-testframework-adapter": "^0.5.0",
                 "infection/extension-installer": "^0.1.0",
                 "infection/include-interceptor": "^0.2.5 || ^1.0.0",
@@ -4022,7 +4022,7 @@
             ],
             "support": {
                 "issues": "https://github.com/infection/infection/issues",
-                "source": "https://github.com/infection/infection/tree/0.35.6"
+                "source": "https://github.com/infection/infection/tree/0.35.7"
             },
             "funding": [
                 {
@@ -4034,7 +4034,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2026-10-02T12:18:24+00:00"
+            "time": "2026-10-13T22:42:52+00:00"
         },
         {
             "name": "infection/mutator",
