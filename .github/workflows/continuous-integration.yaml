@@ -11,6 +11,7 @@ env:
   MIN_MSI: 95.00
   MIN_COVERED_MSI: 98.00
   COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.GITHUB_TOKEN }}"}}'
+  DEFAULT_PHP: '8.5'
 
 jobs:
   phpunit-tests:
@@ -27,6 +28,7 @@ jobs:
         php-version:
           - "8.4"
           - "8.5"
+          - "8.6"
         operating-system:
           - "ubuntu-latest"
     steps:
@@ -61,8 +63,6 @@ jobs:
       matrix:
         dependencies:
           - "locked"
-        php-version:
-          - "8.4"
         operating-system:
           - "ubuntu-latest"
 
@@ -74,7 +74,7 @@ jobs:
         uses: "shivammathur/setup-php@2.40.0"
         with:
           coverage: "xdebug"
-          php-version: "${{ matrix.php-version }}"
+          php-version: ${{ env.DEFAULT_PHP }}
           ini-values: memory_limit=-1, zend.assertions=1
 
       - name: "install dependencies"
@@ -97,8 +97,6 @@ jobs:
       matrix:
         dependencies:
           - "locked"
-        php-version:
-          - "8.4"
         operating-system:
           - "ubuntu-latest"
 
@@ -110,7 +108,7 @@ jobs:
         uses: "shivammathur/setup-php@2.40.0"
         with:
           coverage: "none"
-          php-version: "${{ matrix.php-version }}"
+          php-version: ${{ env.DEFAULT_PHP }}
           ini-values: memory_limit=-1
           tools: composer:v2, cs2pr
 
@@ -131,8 +129,6 @@ jobs:
       matrix:
         dependencies:
           - "locked"
-        php-version:
-          - "8.4"
         operating-system:
           - "ubuntu-latest"
 
@@ -144,7 +140,7 @@ jobs:
         uses: "shivammathur/setup-php@2.40.0"
         with:
           coverage: "none"
-          php-version: "${{ matrix.php-version }}"
+          php-version: ${{ env.DEFAULT_PHP }}
           ini-values: memory_limit=-1
           tools: composer:v2, cs2pr
 
