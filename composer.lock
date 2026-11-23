@@ -5960,12 +5960,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "6db5b2f10022e0a2c18588bfc2e796ecde68d620"
+                "reference": "9b14985ecfc98a89626ef5c83c7af75a9f39b350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/6db5b2f10022e0a2c18588bfc2e796ecde68d620",
-                "reference": "6db5b2f10022e0a2c18588bfc2e796ecde68d620",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/9b14985ecfc98a89626ef5c83c7af75a9f39b350",
+                "reference": "9b14985ecfc98a89626ef5c83c7af75a9f39b350",
                 "shasum": ""
             },
             "conflict": {
@@ -6042,6 +6042,7 @@
                 "bacula-web/bacula-web": "<9.7.1",
                 "badaso/core": "<=2.9.11",
                 "bagisto/bagisto": "<=2.3.15",
+                "baldinof/roadrunner-bundle": ">=3.0.1,<3.2.4",
                 "barrelstrength/sprout-base-email": "<1.2.7",
                 "barrelstrength/sprout-forms": "<3.9",
                 "barryvdh/laravel-translation-manager": "<0.6.8",
@@ -7136,8 +7137,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-11-20T14:57:35+00:00",
-            "published-time": "2026-11-20T14:57:40+00:00"
+            "time": "2026-11-22T21:37:04+00:00",
+            "published-time": "2026-11-22T21:37:08+00:00"
         },
         {
             "name": "sanmai/di-container",
